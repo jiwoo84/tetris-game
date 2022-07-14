@@ -7,9 +7,9 @@ const GAME_COLS = 10;
 
 // variables
 let score = 0;
-let duration = 500;
+let duration = 500; // 블록 떨어지는 시간
 let downInterval;
-let tempMovingItem;
+let tempMovingItem; // 옮길 위치 임시 저장
 
 const BLOCKS = {
   // 블럭 모양이 담긴 2차원 배열
@@ -20,11 +20,14 @@ const BLOCKS = {
       [1, 0],
       [1, 1],
     ],
+    [],
+    [],
+    [],
   ],
 };
 
 const movingItem = {
-  // 위치
+  // 옮기는 위치 저장
   type: "tree",
   direction: 0,
   top: 0,
@@ -34,15 +37,16 @@ const movingItem = {
 init(); // 시작시 배경 만들어짐
 
 // functions
+// 시작 함수
 function init() {
-  // 시작 fnc
-  tempMovingItem = { ...movingItem };
+  tempMovingItem = { ...movingItem }; // 바뀐 위치 값만 저장
   for (let i = 0; i < 20; i++) {
     prependNewLine();
   }
   renderBlocks();
 }
 
+// 배경 모눈 만드는 함수
 function prependNewLine() {
   const li = document.createElement("li");
   const ul = document.createElement("ul");
@@ -55,9 +59,13 @@ function prependNewLine() {
   playground.prepend(li); // li를 html에 추가
 }
 
+// 블럭 그리는 함수
 function renderBlocks() {
-  // 블럭 그리는 함수
   const { type, direction, top, left } = tempMovingItem;
+  BLOCKS[type][direction].forEach((block) => {
+    const x = block[0];
+    const y = block[1];
+    const target = playground.childNodes[y].childNodes[0].childNodes[x];
+    console.log(target);
+  });
 }
-
-21"07
