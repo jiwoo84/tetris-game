@@ -1,2 +1,2 @@
 # tetris-game
-vanilla js로 구현한 테트리스 게임
+vanilla js로 구현한 타이핑 게임
