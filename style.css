@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    width: 100%;
+    background-color: darkgreen;
+    color: white;
+    text-align: center;
+    padding: 1rem; /* 상하좌우 16px; */
+}
+
+.word-display {
+    margin-top: 3rem;
+    font-size: 80px;
+    color: darkgreen;
+}
+
+.word-input-box {
+    margin-top: 2rem;
+}
+
+.word-input {
+    padding: 0.5rem;
+    width: 300px
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin: 2rem;
+    font-size: 14px;
+}
