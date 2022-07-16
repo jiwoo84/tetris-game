@@ -40,3 +40,17 @@ body {
     margin: 2rem;
     font-size: 14px;
 }
+
+.time, .score {
+    font-size: 30px;
+}
+
+.button {
+    width : 200px;
+    height: 35px;
+    background: darkgreen;
+    color: white;
+    border: none;
+    margin-top: 3rem;
+    cur
+}
