@@ -52,5 +52,10 @@ body {
     color: white;
     border: none;
     margin-top: 3rem;
-    cur
+    cursor: pointer;
+}
+
+.loading {
+    background: #ccc;
+    cursor: not-allowed;
 }
