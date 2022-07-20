@@ -51,11 +51,28 @@ body {
     background: darkgreen;
     color: white;
     border: none;
-    margin-top: 3rem;
+    margin-top: 2rem;
     cursor: pointer;
 }
 
 .loading {
     background: #ccc;
     cursor: not-allowed;
+}
+
+.popup {
+    position: absolute;
+    top: 100px;
+    background-color: yellowgreen;
+    color: white;
+    height: 33px;
+    width: 230px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 20px;
+    // popup에 트랜지션 줘야함!!!
+}
+
+.hidden {
+    visibility:hidden;
 }

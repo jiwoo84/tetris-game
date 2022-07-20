@@ -12,6 +12,7 @@ let button = document.querySelector(".button");
 let wordDisplay = document.querySelector('.word-display');
 let wordInput = document.querySelector(".word-input")
 let scoreDisplay = document.querySelector(".score");
+let popup = document.querySelector(".popup");
 
 // 초기 세팅 함수
 init()
@@ -55,6 +56,7 @@ function checkMatch() {
         //  단어 랜덤으로 불러옴
         const randomIndex = Math.floor(Math.random() * words.length);
         wordDisplay.innerText = words[randomIndex];
+        showPopup();
     }
 }
 
@@ -83,4 +85,11 @@ function getWords() {
         .catch(function (error) {
             console.log(error);
         })
+}
+
+function showPopup() {
+    if(!(score % 5) && score > 0) {
+        popup.classList.remove("hidden");
+    }
+    else popup.classList.add("hidden");
 }
