@@ -88,8 +88,12 @@ function getWords() {
 }
 
 function showPopup() {
-    if(!(score % 5) && score > 0) {
+    if(!(score % 2) && score > 0) {
         popup.classList.remove("hidden");
+        popup.classList.add("fadein");
     }
-    else popup.classList.add("hidden");
+    else {
+        popup.classList.add("hidden")
+        popup.classList.remove("fadein")
+    };
 }

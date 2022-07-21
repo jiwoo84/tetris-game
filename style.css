@@ -70,9 +70,24 @@ body {
     font-size: 20px;
     text-align: center;
     border-radius: 20px;
-    // popup에 트랜지션 줘야함!!!
 }
 
 .hidden {
     visibility:hidden;
+}
+
+.fadein {
+    animation: fadein 2s forwards;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
